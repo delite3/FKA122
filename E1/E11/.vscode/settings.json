@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "vector.h": "c",
+        "math.h": "c",
+        "gsl_fft_halfcomplex.h": "c",
+        "stdlib.h": "c"
+    }
+}

@@ -1,0 +1,25 @@
+﻿stdio.h: Input and output operations such as using printf() to display the generated random numbers. Any program that needs to interact with the user via console (e.g., printing results) will need this.
+
+gsl/gsl_rng.h: Where GSL defines the random number generation functionality and provides types and functions for creating and managing random number generators - used to generate random numbers.
+
+gsl/gsl_randist.h: Extends the gsl_rng.h library and provides some more functions like probability distributions such as uniform and gaussian. 
+
+time.h: Standard library for time-related functions
+
+const gsl_rng_type * T; It declares a pointer to a gsl_rng_type structure. The structure is typiclly a table of function pointers and internal state data that are used by the RNG generator later. It does not generate random numbers itself but it's a bit like pointing to a library and the library contains all the functions. Later I will define what section of the library I want to use when I declare T = gsl_rng_default.
+
+gsl_rng * r; on the other hand r is a pointer to an actual instance of an RNG We could have two different r1 and r2 of the same type of rng. 
+
+So, r is the "handle" to your specific RNG instance, and it points to the allocated memory that holds the RNG's internal state. 
+
+If you were just generating random numbers, you could theoretically use a simple int or float type to store a random number. However, the key difference is that a random number generator needs to maintain state. For example, the Mersenne Twister algorithm requires a large internal state (over 600 integers) to generate the numbers in a high-quality, pseudo-random sequence.
+
+The gsl_rng structure encapsulates the entire state of the RNG. It includes not just the last generated number, but also the internal state needed to continue generating new random numbers in sequence.
+
+gsl_rng_env_setup(); This function sets up the random number generator system by checking for environment variables that control the RNG behavior. While the program doesn’t make use of custom environment variables, it's a good practice to call it to ensure the RNG system is initialized. It’s particularly useful if you want to tweak random number generation behavior based on system settings (such as entropy sources).
+
+T = gsl_rng_default; pointing to the type of rng we want, in this case the defualt.
+
+r = gsl_rng_alloc(T); making an instance of an rng (object)
+
+gsl_rng_set(r, seed); sets the seed of the instance r

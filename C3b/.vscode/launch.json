@@ -1,0 +1,58 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug with gdb",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/program_gdb",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "Build for gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "logging": {
+          "engineLogging": false,
+          "trace": false,
+          "traceResponse": false
+        }
+      },
+      {
+        "name": "Run with Address Sanitizer",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/address",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "Build with Address Sanitizer",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "logging": {
+          "engineLogging": true,
+          "trace": true,
+          "traceResponse": true
+        }
+      }
+    ]
+  }
+  

@@ -1,0 +1,13 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Users/darre/Desktop/Chalmers/vscode/E2/statistical_inefficiency'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000005C0, symSize: 0x270 }
+  - { offset: 0x62, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000005C0, symSize: 0x270 }
+  - { offset: 0x126, size: 0x8, addend: 0x0, symName: _average, symObjAddr: 0x270, symBinAddr: 0x100000830, symSize: 0x60 }
+  - { offset: 0x186, size: 0x8, addend: 0x0, symName: _variance, symObjAddr: 0x2D0, symBinAddr: 0x100000890, symSize: 0xA0 }
+  - { offset: 0x210, size: 0x8, addend: 0x0, symName: _find_s_from_autocorr, symObjAddr: 0x370, symBinAddr: 0x100000930, symSize: 0xC0 }
+  - { offset: 0x2E2, size: 0x8, addend: 0x0, symName: _find_s_from_block_averaging, symObjAddr: 0x430, symBinAddr: 0x1000009F0, symSize: 0x210 }
+  - { offset: 0x41E, size: 0x8, addend: 0x0, symName: _autocorrelation, symObjAddr: 0x640, symBinAddr: 0x100000C00, symSize: 0xE0 }
+  - { offset: 0x4A8, size: 0x8, addend: 0x0, symName: _block_average, symObjAddr: 0x720, symBinAddr: 0x100000CE0, symSize: 0x134 }
+...

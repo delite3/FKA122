@@ -1,0 +1,9 @@
+{
+    "file_name": "e2task5for1p.c",
+    "description": "Program implementing the Metropolis algorithm to compute a three-dimensional integral.",
+    "dependencies": ["gsl", "gslcblas"],
+    "compiler": "gcc",
+    "compiler_flags": ["-std=c99", "-Wall", "-lm", "-lgsl", "-lgslcblas"],
+    "run_command": "./e2task5for1p",
+    "expected_output": "Estimated integral: [numeric_value]"
+}
